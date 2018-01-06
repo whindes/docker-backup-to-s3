@@ -18,7 +18,8 @@ RUN apk update \
     && mv /tmp/sync.sh /sync.sh \
     && chmod +x /sync.sh \
     && mv /tmp/get.sh /get.sh \
-    && chmod +x /get.sh
+    && chmod +x /get.sh \
+    && rm -rf /tmp/*
 
 ENTRYPOINT ["/start.sh"]
 CMD [""]
