@@ -10,6 +10,7 @@ RUN apk update \
         py-pip \
         openrc \
         dcron \
+        jq \
     # Add dcron to init
 	&& rc-update add dcron default \
 	&& echo 'null::respawn:/sbin/syslogd -n -S -D -O /proc/1/fd/1' >> /etc/inittab \
